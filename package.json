@@ -33,7 +33,9 @@
       "Mithun Technologies",
       "express"
     ],
-    "author": "Mithun Reddy Lacchannagari",
-    "license": "MIT"
+    "author": {
+        "name": "Mithun Reddy Lacchannagari",
+        "license": "MIT"
+    }
   }
   
