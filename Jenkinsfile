@@ -1,7 +1,7 @@
 pipeline{
     agent any
     tools{
-        nodejs 'NodeJS'//NodeJS plugin 
+        nodejs 'NodeJS'
     }
     stages{
         stage('CheckOutCode'){
@@ -22,6 +22,12 @@ pipeline{
         stage('Upload Atrifact into Nexus'){
             steps{
                 sh "npm publish --registry http://13.127.44.68:8081/repository/wallmart-npm-repo/"
+            }
+        }
+        stage('Run Nodejs App'){
+            steps{
+                sh "chmod u+x ./scripts/runApp.sh"
+                sh "./scripts/runApp.sh"
             }
         }
         
